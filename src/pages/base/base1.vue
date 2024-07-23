@@ -45,8 +45,5 @@ const init = () => {
 </template>
 
 <style scoped>
-#scene-container {
-  width: 100vw;
-  height: 100vh;
-}
+
 </style>
