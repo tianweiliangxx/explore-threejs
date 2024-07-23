@@ -8,7 +8,7 @@ import { onMounted } from "vue";
 import { World } from "@/util/World/World.js"
 
 onMounted(() => {
-  // main()
+  main()
 })
 
 const main = () => {
@@ -22,7 +22,7 @@ const main = () => {
 </script>
 
 <template>
-  <button @click="main">渲染</button>
+<!--  <button @click="main">渲染</button>-->
   <div id="scene-container"></div>
 </template>
 
