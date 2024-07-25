@@ -21,7 +21,6 @@ class World{
     const light = createLights()
     scene.add(cube, light)
 
-
     const resizer = new Resizer(container, camera, renderer)
   }
   render() {

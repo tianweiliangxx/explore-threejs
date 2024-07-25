@@ -1,7 +1,7 @@
 
 <script setup>
 /**
- * 变换
+ * 封装
  */
 import * as Three from "three"
 import { onMounted } from "vue";
@@ -22,10 +22,13 @@ const main = () => {
 </script>
 
 <template>
-  <!--  <button @click="main">渲染</button>-->
+<!--  <button @click="main">渲染</button>-->
   <div id="scene-container"></div>
 </template>
 
 <style scoped>
-
+#scene-container {
+  width: 100vw;
+  height: 100vh;
+}
 </style>
