@@ -16,7 +16,8 @@ const main = () => {
 
   const world = new World(container)
 
-  world.render()
+  world.start()
+  // world.render()
 }
 
 </script>
