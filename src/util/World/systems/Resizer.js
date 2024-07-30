@@ -2,7 +2,7 @@ const setSize = (container, camera, renderer) => {
   camera.aspect = container.clientWidth / container.clientHeight;
   // update the camera's frustum
   camera.updateProjectionMatrix();
-
+  console.log(container.clientWidth, container.clientHeight)
   renderer.setSize(container.clientWidth, container.clientHeight);
 
   renderer.setPixelRatio(window.devicePixelRatio);
@@ -14,9 +14,11 @@ class Resizer {
 
     window.addEventListener('resize', () => {
       setSize(container, camera, renderer)
-      console.log(123123)
+      this.onResize()
     });
   }
+
+  onResize() {}
 
 }
 
