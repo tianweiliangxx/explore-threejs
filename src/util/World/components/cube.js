@@ -1,11 +1,30 @@
-import {BoxGeometry, CircleGeometry, Mesh, MeshBasicMaterial, MeshStandardMaterial, Vector3, MathUtils} from "three";
+import {
+  BoxGeometry,
+  MathUtils,
+  Mesh,
+  MeshStandardMaterial,
+  TextureLoader,
+} from "three";
+
+function createMaterial() {
+  const textureLoader = new TextureLoader();
+
+  const texture = textureLoader.load('/textures/uv-test-bw.png')
+
+  const material = new MeshStandardMaterial({
+    map: texture,
+  });
+
+  return material;
+}
 
 function createCube() {
   // 立方体
   const geometry = new BoxGeometry(2,2,2);
   // 圆形
   // const geometry = new CircleGeometry(1, 32);
-  const material = new MeshStandardMaterial({ color: "purple" });
+  // 材质
+  const material = createMaterial()
 
   const cube = new Mesh(geometry, material);
 
